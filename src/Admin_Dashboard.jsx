@@ -12,7 +12,7 @@ const About_Page = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch orders when the component mounts
+  // Fetch all orders when the component mounts
   useEffect(() => {
     const fetchOrders = async () => {
       try {
