@@ -14,7 +14,7 @@ const Cart = () => {
       try {
         const cartData = JSON.parse(localStorage.getItem("cart")) || {};
         const itemPromises = Object.entries(cartData).map(async ([id, quantity]) => {
-          const response = await fetch(`http://localhost:3000/products/${id}`);
+          const response = await fetch(`https://mmtrjy-3000.csb.app/products/${id}`);
           if (!response.ok) {
             throw new Error(`Failed to fetch product ${id}`);
           }
@@ -93,7 +93,7 @@ const Cart = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/orders", {
+      const response = await fetch("https://mmtrjy-3000.csb.app/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -295,7 +295,7 @@ export default Cart;
 //       try {
 //         const cartData = JSON.parse(localStorage.getItem("cart")) || {};
 //         const itemPromises = Object.entries(cartData).map(async ([id, quantity]) => {
-//           const response = await fetch(`http://localhost:3000/products/${id}`);
+//           const response = await fetch(`https://mmtrjy-3000.csb.app/products/${id}`);
 //           if (!response.ok) {
 //             throw new Error(`Failed to fetch product ${id}`);
 //           }
@@ -558,7 +558,7 @@ export default Cart;
 //       try {
 //         const cartData = JSON.parse(localStorage.getItem("cart")) || {};
 //         const itemPromises = Object.entries(cartData).map(async ([id, quantity]) => {
-//           const response = await fetch(`http://localhost:3000/products/${id}`);
+//           const response = await fetch(`https://mmtrjy-3000.csb.app/products/${id}`);
 //           if (!response.ok) {
 //             throw new Error(`Failed to fetch product ${id}`);
 //           }

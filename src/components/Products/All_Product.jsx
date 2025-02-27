@@ -16,29 +16,29 @@ const All_Products = () => {
     const fetchProducts = async () => {
       setLoading(true);
       setError(null);
-      let url = "http://localhost:3000/user/getAllProducts";
+      let url = "https://mmtrjy-3000.csb.app/user/getAllProducts";
 
       // Check if a sort filter is applied
       if (sortFilter) {
         switch (sortFilter) {
           case "newest":
-            url = "http://localhost:3000/products/newest";
+            url = "https://mmtrjy-3000.csb.app/products/newest";
             break;
           case "oldest":
-            url = "http://localhost:3000/products/oldest";
+            url = "https://mmtrjy-3000.csb.app/products/oldest";
             break;
           case "price-high":
-            url = "http://localhost:3000/products/price-high";
+            url = "https://mmtrjy-3000.csb.app/products/price-high";
             break;
           case "price-low":
-            url = "http://localhost:3000/products/price-low";
+            url = "https://mmtrjy-3000.csb.app/products/price-low";
             break;
           default:
             break;
         }
       } else if (categoryFilter) {
         // If a category filter is applied, use the query parameter endpoint
-        url = `http://localhost:3000/user/getAllProducts?category=${encodeURIComponent(
+        url = `https://mmtrjy-3000.csb.app/user/getAllProducts?category=${encodeURIComponent(
           categoryFilter
         )}`;
       }
@@ -239,7 +239,7 @@ export default All_Products;
 //   useEffect(() => {
 //     const fetchProducts = async () => {
 //       try {
-//         const response = await fetch('http://localhost:3000/user/getAllProducts');
+//         const response = await fetch('https://mmtrjy-3000.csb.app/user/getAllProducts');
 //         if (!response.ok) {
 //           throw new Error('Failed to fetch products');
 //         }

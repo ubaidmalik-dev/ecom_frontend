@@ -47,7 +47,7 @@ const Dashboard = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/admin/products",
+        "https://mmtrjy-3000.csb.app/user/admin/products",
         data,
         {
           headers: {
